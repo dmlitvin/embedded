@@ -28,7 +28,7 @@ COM (контакти 3, 8) → 3.3 V, DP не підключений; сегм�
 
 ```sh
 get_idf
-cd examples/traffic_light
+cd traffic_light
 idf.py -p /dev/cu.usbmodem2101 build flash monitor
 ```
 

@@ -8,7 +8,7 @@ LED підключений до GPIO4 через резистор 330 Ω, кат
 
 ```sh
 get_idf
-cd examples/blink
+cd blink
 idf.py build
 idf.py -p /dev/cu.usbmodem1101 flash monitor
 ```
