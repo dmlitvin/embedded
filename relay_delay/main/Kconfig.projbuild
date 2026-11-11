@@ -1,0 +1,44 @@
+menu "Relay delay measurement"
+    config RELAY_WIRING_CONFIRMED
+        bool "Wiring and 3.3 V compatibility have been confirmed"
+        default n
+        help
+            Enable only after verifying the driver, its active level and both
+            GPIOs. COM must connect to ESP32 GND and NO to the input, with no
+            external voltage on the dry contacts. Disabled means no GPIO setup.
+
+    config RELAY_DRIVE_GPIO
+        int "Relay driver GPIO (-1 = unspecified)"
+        range -1 48
+        default -1
+
+    config RELAY_CONTACT_GPIO
+        int "Dry NO contact GPIO (-1 = unspecified)"
+        range -1 48
+        default -1
+
+    config RELAY_ACTIVE_LEVEL
+        int "Driver active level (0 = LOW, 1 = HIGH)"
+        range 0 1
+        default 1
+
+    config RELAY_CYCLES
+        int "Number of ON/OFF cycles"
+        range 10 100
+        default 10
+
+    config RELAY_DEBOUNCE_MS
+        int "Required quiet contact interval (ms)"
+        range 1 100
+        default 10
+
+    config RELAY_TIMEOUT_MS
+        int "Transition timeout including confirmation (ms)"
+        range 200 5000
+        default 1000
+
+    config RELAY_HOLD_MS
+        int "Hold time after each successful measurement (ms)"
+        range 100 5000
+        default 250
+endmenu

@@ -1,0 +1,27 @@
+Relay mechanical delay measurement (ESP-IDF, microseconds)
+drive=4; contact=5; active=1; quiet=10 ms; cycles=10
+cycle,phase,first_us,settled_us,bounce_us,interrupts
+1,ON,3516,4107,591,14
+1,OFF,3810,3810,0,3
+2,ON,3500,4093,593,10
+2,OFF,3799,3806,7,3
+3,ON,3497,3982,485,11
+3,OFF,3799,3799,0,1
+4,ON,3492,4113,621,12
+4,OFF,3795,3808,13,4
+5,ON,3503,3988,485,9
+5,OFF,3798,3798,0,2
+6,ON,3499,4118,619,12
+6,OFF,3793,3801,8,2
+7,ON,3500,4115,615,10
+7,OFF,3791,3795,4,2
+8,ON,3501,3999,498,10
+8,OFF,3791,3791,0,1
+9,ON,3504,3989,485,10
+9,OFF,3790,3790,0,2
+10,ON,3501,4121,620,10
+10,OFF,3789,3792,3,2
+ON: valid=10; mean_first=3501.3 us; mean_settled=4062.5 us
+OFF: valid=10; mean_first=3795.5 us; mean_settled=3799.0 us
+COMPLETE; relay commanded OFF. Reset to repeat.
+I (7673) main_task: Returned from app_main()
