@@ -1,0 +1,13 @@
+menu "Button debounce assignment"
+    config BUTTON_GPIO
+        int "Confirmed external button GPIO (-1 disables hardware)"
+        range -1 48
+        default -1
+        help
+            Set only after confirming board pinout and wiring. Active LOW,
+            external 10 kohm pull-up to 3.3 V. Internal pulls are disabled.
+    config BUTTON_START_MODE
+        int "Initial mode: 1 raw, 2 time, 3 state, 4 polling"
+        range 1 4
+        default 1
+endmenu

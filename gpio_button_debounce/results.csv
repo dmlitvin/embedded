@@ -1,0 +1,9 @@
+method,rc,physical_presses,raw_interrupts,accepted_reactions,net_extra_reactions,queue_lost
+raw,0,10,16,16,6,0
+time_based,0,10,10,10,0,0
+state_based,0,10,10,10,0,0
+polling,0,10,0,10,0,0
+raw,1,10,14,14,4,0
+time_based,1,10,16,16,6,0
+state_based,1,10,16,10,0,0
+polling,1,10,0,10,0,0

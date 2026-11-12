@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.22)
+project(debounce_tests LANGUAGES CXX)
+enable_testing()
+add_executable(debounce_tests debounce_test.cpp)
+target_compile_features(debounce_tests PRIVATE cxx_std_17)
+target_compile_options(debounce_tests PRIVATE -Wall -Wextra -Werror)
+target_include_directories(debounce_tests PRIVATE ../main)
+add_test(NAME debounce_traces COMMAND debounce_tests)
